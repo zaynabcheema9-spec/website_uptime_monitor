@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WEBHOOK_URL="$DISCORD_WEBHOOK_URL"
+WEBHOOK_URL="https://discord.com/api/webhooks/1512163442885263552/sz7vS0PT2zky9b8a9NnpgUle78ZkVRs-x_EOMzKRBCGKgiCeKYjSXjaotSdwcu0j-52X"
 WEBSITES_FILE="websites.txt"
 LOG_FILE="website-log.txt"
 
