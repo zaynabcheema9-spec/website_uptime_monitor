@@ -3,7 +3,7 @@ name: Run Watchdog
 on:
   schedule:
     # 8:00 PM PKT = 3:00 PM UTC
-    - cron: '0 15 * * *'
+    - cron: '0 16 * * *'
 
   workflow_dispatch:
 
