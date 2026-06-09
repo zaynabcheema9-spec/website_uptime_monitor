@@ -12,12 +12,17 @@ on:
       - main
 
 jobs:
-  run-bat:
-    runs-on: windows-latest
+  run-watchdog:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Make script executable
+        run: chmod +x watchdog.sh
+
       - name: Run Watchdog
-        run: .\watchdog.bat
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: ./watchdog.sh
