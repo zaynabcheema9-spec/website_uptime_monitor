@@ -1,0 +1,23 @@
+name: Run Watchdog
+
+on:
+  schedule:
+    # 8:00 PM PKT = 3:00 PM UTC
+    - cron: '0 15 * * *'
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  run-bat:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Watchdog
+        run: .\watchdog.bat
